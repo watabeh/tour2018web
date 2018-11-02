@@ -1,31 +1,39 @@
 # README
 
-## \’zè‡
+## æ§‹ç¯‰æ‰‹é †
 
-$ rails new remind_2
-$ cd remind_2/
-$ rails generate scaffold Point name:string latitude:float longitude:float remark:text
-$ rails generate scaffold Point name:string latitude:float longitude:float remark:text
-$ rails generate scaffold Post point_id:integer title:string detail:text
-$ rails db:migrate
+```
+$ rails new remind_2  
+$ cd remind_2/  
+$ rails generate scaffold Point name:string latitude:float longitude:float remark:text  
+$ rails generate scaffold Point name:string latitude:float longitude:float remark:text  
+$ rails generate scaffold Post point_id:integer title:string detail:text  
+$ rails db:migrate  
+```
 
-## Àsè‡
+## å®Ÿè¡Œæ‰‹é †
 
-$ # seeds.rb ƒtƒ@ƒCƒ‹A‘Î‰‚·‚éCSV‚ğ—pˆÓ‚µ‚½ã‚Å
-$ # ª‚à‚¤“ü‚Á‚Ä‚Ü‚·
-$ rails db:seed
+```
+$ # seeds.rb ãƒ•ã‚¡ã‚¤ãƒ«ã€å¯¾å¿œã™ã‚‹CSVã‚’ç”¨æ„ã—ãŸä¸Šã§  
+$ # ï¼ˆâ†‘ã‚‚ã†å…¥ã£ã¦ã¾ã™ï¼‰  
+$ rails db:seed  
 
-$ # •Ê‘‹‚Å
-$ rails s -p 7000
+$ # åˆ¥çª“ã§  
+$ rails s -p 7000  
 
-$ # localhost:7000@‚ÉƒAƒNƒZƒX
+$ # localhost:7000ã€€ã«ã‚¢ã‚¯ã‚»ã‚¹  
+```
 
-http://localhost:7000/points/ ‚Åˆê——•\¦
-http://localhost:7000/points/1 ‚È‚Ç‚Åjsonæ“¾
+http://localhost:7000/points/ ã§ä¸€è¦§è¡¨ç¤º  
+http://localhost:7000/points/1 ãªã©ã§jsonå–å¾—  
+`$ curl -X POST -H "Content-Type: application/json" -d '{"post":{"point_id":"1", "title":"test", "detail":"hoge"}}' http://192.168.1.86:7000/posts`  
+ä¸Šè¨˜ã®ã‚ˆã†ã«postã™ã‚‹  
 
---------------
-DBÄ\’z‚·‚é‚Æ‚«
+--------------  
+DBå†æ§‹ç¯‰ã™ã‚‹ã¨ã  
 
-rails db:drop:_unsafe
-rails db:migrate
-rails db:seed
+```
+rails db:drop:_unsafe  
+rails db:migrate  
+rails db:seed  
+```
